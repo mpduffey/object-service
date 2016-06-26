@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, RequestOptions} from '@angular/http';
 import 'rxjs/Rx';
 
-@Injectable({})
+@Injectable()
 
 export class ObjectService {
 	constructor(http: Http) {
