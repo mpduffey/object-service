@@ -1,10 +1,13 @@
 import {Injectable} from '@angular/core';
-import {Http, RequestOptions} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/Rx';
 
 @Injectable()
 
 export class ObjectService {
+	http: Http;
+	object_call: any;
+
 	constructor(http: Http) {
 		this.http = http;
 		this.object_call = http.get('http://duffeytech.com/objectmanager/getSomeObjects')

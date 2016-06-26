@@ -42,13 +42,13 @@ var ObjectService = (function () {
                 .map(function (res) { return res.json(); });
         };
         this.saveObject = function (object) {
-            var headers = new Headers({ 'Content-Type': 'application/json' });
+            var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
             var options = new http_1.RequestOptions({ headers: headers });
             return _this.http.post('http://duffeytech.com/objectmanager/update_object', JSON.stringify(object), options);
         };
         this.linkObjects = function (tags, linked_object) {
             if (linked_object.value === -1) {
-                var headers = new Headers({ 'Content-Type': 'application/json' });
+                var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
                 var options = new http_1.RequestOptions({ headers: headers });
                 var data = {
                     ObjectName: linked_object.name,
@@ -69,13 +69,13 @@ var ObjectService = (function () {
                 .map(function (res) { return res.json(); });
         };
         this.createObject = function (object) {
-            var headers = new Headers({ 'Content-Type': 'application/json' });
+            var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
             var options = new http_1.RequestOptions({ headers: headers });
             return _this.http.post('http://duffeytech.com/objectmanager/ng_add_object', JSON.stringify(object), options)
                 .map(function (res) { return res.json(); });
         };
         this.updateObjectRank = function (order_array) {
-            var headers = new Headers({ 'Content-Type': 'application/json' });
+            var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
             var options = new http_1.RequestOptions({ headers: headers });
             return _this.http.post('http://duffeytech.com/objectmanager/ng_update_object_object_order', JSON.stringify(order_array), options);
         };
