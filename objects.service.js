@@ -88,9 +88,7 @@ var ObjectService = (function () {
             .map(function (res) { return res.json(); });
     }
     ObjectService = __decorate([
-        core_1.Injectable({
-            viewProviders: [http_1.HTTP_PROVIDERS]
-        }), 
+        core_1.Injectable({}), 
         __metadata('design:paramtypes', [http_1.Http])
     ], ObjectService);
     return ObjectService;

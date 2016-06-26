@@ -1,10 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Http, HTTP_PROVIDERS, RequestOptions} from '@angular/http';
+import {Http, RequestOptions} from '@angular/http';
 import 'rxjs/Rx';
 
-@Injectable({
-	viewProviders: [HTTP_PROVIDERS]
-})
+@Injectable({})
 
 export class ObjectService {
 	constructor(http: Http) {
