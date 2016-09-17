@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers, RequestOptions} from '@angular/http';
+import {Http, RequestOptions} from '@angular/http';
 import 'rxjs/Rx';
 
 @Injectable()
@@ -49,7 +49,7 @@ export class ObjectService {
 	linkObjects = (tags, linked_object) => {
 		if(linked_object.value === -1) {
 			let headers = new Headers({'Content-Type': 'application/json'});
-			let options = new RequestOptions({ headers: headers });
+			let options = new RequestOptions({headers: headers});
 		
 			var data = {
 				ObjectName:			linked_object.name,
